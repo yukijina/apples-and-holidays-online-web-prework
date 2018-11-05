@@ -74,7 +74,7 @@ def all_winter_holiday_supplies(holiday_hash)
   # return an array of all of the supplies that are used in the winter season
   
   empty_arr = []
-  holiday_hash.each |key, value|
+  holiday_hash.each do |key, value|
     if key == :winter
       value.each do |holiday, supply|
         empty << supply
