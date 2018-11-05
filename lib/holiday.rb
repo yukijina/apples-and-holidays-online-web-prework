@@ -94,8 +94,9 @@ def all_supplies_in_holidays(holiday_hash)
   # etc.
   
   holiday_hash.each do |key, value|
+    puts "#{key.to_s.capitalize!}:"
     value.each do |holiday, name|
-      puts
+    puts "#{holiday.to_s.split("_").map(&:capitalize).join(" ")}: #{name.join(", ")}"
     end
   end
 
