@@ -77,10 +77,11 @@ def all_winter_holiday_supplies(holiday_hash)
   holiday_hash.each |key, value|
     if key == :winter
       value.each do |holiday, supply|
-        supply
+        empty << supply
       end
     end
-  
+  end
+  empty.flatten
 end
 
 def all_supplies_in_holidays(holiday_hash)
